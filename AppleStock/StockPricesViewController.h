@@ -10,6 +10,6 @@
 
 @interface StockPricesViewController : NSViewController
 
-- (void)drawGrid;
+@property (weak) IBOutlet NSView *animationView;
 
 @end
