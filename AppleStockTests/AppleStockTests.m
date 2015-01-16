@@ -8,6 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
+#import "StockPricesModel.h"
+#import "StockPrice.h"
+
+NSString *testDataSource = @"stockprices.json";
 
 @interface AppleStockTests : XCTestCase
 
@@ -25,16 +29,44 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+- (void)testThatModelIsInitialized {
+	StockPricesModel *stockPricesModel = [StockPricesModel new];
+	[stockPricesModel loadDataFromSource:testDataSource];
+	XCTAssertEqual(stockPricesModel.pricesArray.count, 5);
+	
+	NSDateFormatter *dateFormatter = [NSDateFormatter new];
+	[dateFormatter setDateFormat:@"yyyy-MM-dd"];
+	NSNumberFormatter *priceFormatter = [NSNumberFormatter new];
+	
+	NSDate *testDate = [dateFormatter dateFromString:@"2014-09-09"];
+	NSNumber *testPrice = [priceFormatter numberFromString:@"97.99"];
+	NSNumber *resultPrice = [NSNumber new];
+	
+	for (StockPrice *item in stockPricesModel.pricesArray) {
+		if (item.date == testDate) {
+			resultPrice = item.price;
+			break;
+		}
+	}
+	
+	XCTAssert([resultPrice compare:testPrice] == NSOrderedSame);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
-}
+- (void)testThatHighAndLowPricesAreCorrect {
+	StockPricesModel *stockPricesModel = [StockPricesModel new];
+	[stockPricesModel loadDataFromSource:testDataSource];
 
+	NSNumberFormatter *priceFormatter = [NSNumberFormatter new];
+	NSNumber *highest = [priceFormatter numberFromString:@"102.66"];
+	NSNumber *lowest = [priceFormatter numberFromString:@"93.00"];
+	
+	XCTAssert([highest compare:[stockPricesModel highestPrice]] == NSOrderedSame);
+	XCTAssert([lowest compare:[stockPricesModel lowestPrice]] == NSOrderedSame);
+}
 @end
+
+
+
+
+
+
