@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
     </dependencies>
     <scenes>
@@ -686,10 +687,6 @@
                             <constraint firstItem="U3R-9S-a0m" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="wHu-Em-8ZO"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="animationView" destination="U3R-9S-a0m" id="tpR-1V-fuN"/>
-                        <outlet property="chartView" destination="U3R-9S-a0m" id="UyU-W5-RhU"/>
-                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

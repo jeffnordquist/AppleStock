@@ -1,5 +1,5 @@
 //
-//  StockPricesModel.m
+//  DailyPricesModel.m
 //  AppleStock
 //
 //  Created by Jeff Nordquist on 1/16/15.
@@ -25,7 +25,7 @@
 {
 	self = [super init];
 	if (self) {
-		_pricesArray = nil;
+		_dailyPrices = nil;
 	}
 	return self;
 }
@@ -41,7 +41,7 @@
 		if (error) {
 			NSLog(@"%@", error);
 		} else {
-			_pricesArray = [NSMutableArray new];
+			_dailyPrices = [NSMutableArray new];
 
 			NSArray *pricesArray = stockPrices[@"stockdata"];
 			if (pricesArray) {
@@ -53,7 +53,7 @@
 					NSDate *date = [dateFormatter dateFromString:item[@"date"]];
 					NSNumber *price = [priceFormatter numberFromString:item[@"close"]];
 					DailyPrice *newStockPriceItem = [[DailyPrice alloc] initWithDate:date price:price];
-					[_pricesArray addObject:newStockPriceItem];
+					[_dailyPrices addObject:newStockPriceItem];
 				}
 			}
 		}
@@ -62,7 +62,7 @@
 
 - (NSNumber *)highestPrice {
 	NSNumber *highest = nil;
-	for (DailyPrice *currentPrice in _pricesArray) {
+	for (DailyPrice *currentPrice in _dailyPrices) {
 		if (highest == nil ) {
 			highest = currentPrice.price;
 		} else {
@@ -74,7 +74,7 @@
 
 - (NSNumber *)lowestPrice {
 	NSNumber *lowest = nil;
-	for (DailyPrice *currentPrice in _pricesArray) {
+	for (DailyPrice *currentPrice in _dailyPrices) {
 		if (lowest == nil ) {
 			lowest = currentPrice.price;
 		} else {

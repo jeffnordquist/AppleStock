@@ -32,7 +32,7 @@ NSString *testDataSource = @"stockprices.json";
 - (void)testThatModelIsInitialized {
 	DailyPricesModel *stockPricesModel = [DailyPricesModel new];
 	[stockPricesModel loadDataFromSource:testDataSource];
-	XCTAssertEqual(stockPricesModel.pricesArray.count, 5);
+	XCTAssertEqual(stockPricesModel.dailyPrices.count, 5);
 	
 	NSDateFormatter *dateFormatter = [NSDateFormatter new];
 	[dateFormatter setDateFormat:@"yyyy-MM-dd"];
@@ -42,14 +42,14 @@ NSString *testDataSource = @"stockprices.json";
 	NSNumber *testPrice = [priceFormatter numberFromString:@"97.99"];
 	NSNumber *resultPrice = [NSNumber new];
 	
-	for (DailyPrice *item in stockPricesModel.pricesArray) {
+	for (DailyPrice *item in stockPricesModel.dailyPrices) {
 		if (item.date == testDate) {
 			resultPrice = item.price;
 			break;
 		}
 	}
 	
-	XCTAssert([resultPrice compare:testPrice] == NSOrderedSame);
+	XCTAssert([resultPrice isEqualToNumber:testPrice]);
 }
 
 - (void)testThatHighAndLowPricesAreCorrect {

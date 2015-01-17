@@ -1,5 +1,5 @@
 //
-//  StockPricesViewController.m
+//  ChartViewController.m
 //  AppleStock
 //
 //  Created by Jeff Nordquist on 1/16/15.
