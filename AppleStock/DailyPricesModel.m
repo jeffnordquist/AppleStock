@@ -6,10 +6,10 @@
 //  Copyright (c) 2015 NQE. All rights reserved.
 //
 
-#import "StockPricesModel.h"
-#import "StockPrice.h"
+#import "DailyPricesModel.h"
+#import "DailyPrice.h"
 
-@implementation StockPricesModel
+@implementation DailyPricesModel
 
 + (instancetype)sharedInstance {
 	static dispatch_once_t once;
@@ -52,7 +52,7 @@
 				for (NSDictionary *item in pricesArray) {
 					NSDate *date = [dateFormatter dateFromString:item[@"date"]];
 					NSNumber *price = [priceFormatter numberFromString:item[@"close"]];
-					StockPrice *newStockPriceItem = [[StockPrice alloc] initWithDate:date price:price];
+					DailyPrice *newStockPriceItem = [[DailyPrice alloc] initWithDate:date price:price];
 					[_pricesArray addObject:newStockPriceItem];
 				}
 			}
@@ -62,7 +62,7 @@
 
 - (NSNumber *)highestPrice {
 	NSNumber *highest = nil;
-	for (StockPrice *currentPrice in _pricesArray) {
+	for (DailyPrice *currentPrice in _pricesArray) {
 		if (highest == nil ) {
 			highest = currentPrice.price;
 		} else {
@@ -74,7 +74,7 @@
 
 - (NSNumber *)lowestPrice {
 	NSNumber *lowest = nil;
-	for (StockPrice *currentPrice in _pricesArray) {
+	for (DailyPrice *currentPrice in _pricesArray) {
 		if (lowest == nil ) {
 			lowest = currentPrice.price;
 		} else {

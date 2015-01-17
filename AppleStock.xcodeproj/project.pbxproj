@@ -9,15 +9,15 @@
 /* Begin PBXBuildFile section */
 		1F2AA3371A6983740073155E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2AA3361A6983740073155E /* AppDelegate.m */; };
 		1F2AA3391A6983740073155E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2AA3381A6983740073155E /* main.m */; };
-		1F2AA33C1A6983740073155E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2AA33B1A6983740073155E /* ViewController.m */; };
 		1F2AA33E1A6983740073155E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F2AA33D1A6983740073155E /* Images.xcassets */; };
 		1F2AA3411A6983740073155E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F2AA33F1A6983740073155E /* Main.storyboard */; };
 		1F2AA34D1A6983740073155E /* AppleStockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2AA34C1A6983740073155E /* AppleStockTests.m */; };
 		1F2AA3571A69839F0073155E /* stockprices.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F2AA3561A69839F0073155E /* stockprices.json */; };
-		1F2AA35C1A6983DE0073155E /* StockPricesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2AA35B1A6983DE0073155E /* StockPricesModel.m */; };
-		1F2AA35D1A6985BF0073155E /* StockPricesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2AA35B1A6983DE0073155E /* StockPricesModel.m */; };
-		1F2AA3601A698AAB0073155E /* StockPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2AA35F1A698AAB0073155E /* StockPrice.m */; };
-		1F2AA3631A6994110073155E /* StockPricesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2AA3621A6994110073155E /* StockPricesViewController.m */; };
+		1F2AA35C1A6983DE0073155E /* DailyPricesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2AA35B1A6983DE0073155E /* DailyPricesModel.m */; };
+		1F2AA35D1A6985BF0073155E /* DailyPricesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2AA35B1A6983DE0073155E /* DailyPricesModel.m */; };
+		1F2AA3601A698AAB0073155E /* DailyPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2AA35F1A698AAB0073155E /* DailyPrice.m */; };
+		1F2AA3631A6994110073155E /* ChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2AA3621A6994110073155E /* ChartViewController.m */; };
+		1FA1C0841A6A26AE00247112 /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA1C0831A6A26AE00247112 /* ChartView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,20 +36,20 @@
 		1F2AA3351A6983740073155E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1F2AA3361A6983740073155E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1F2AA3381A6983740073155E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1F2AA33A1A6983740073155E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1F2AA33B1A6983740073155E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1F2AA33D1A6983740073155E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1F2AA3401A6983740073155E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F2AA3461A6983740073155E /* AppleStockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleStockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F2AA34B1A6983740073155E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F2AA34C1A6983740073155E /* AppleStockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppleStockTests.m; sourceTree = "<group>"; };
 		1F2AA3561A69839F0073155E /* stockprices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stockprices.json; sourceTree = "<group>"; };
-		1F2AA35A1A6983DE0073155E /* StockPricesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockPricesModel.h; sourceTree = "<group>"; };
-		1F2AA35B1A6983DE0073155E /* StockPricesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockPricesModel.m; sourceTree = "<group>"; };
-		1F2AA35E1A698AAB0073155E /* StockPrice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockPrice.h; sourceTree = "<group>"; };
-		1F2AA35F1A698AAB0073155E /* StockPrice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockPrice.m; sourceTree = "<group>"; };
-		1F2AA3611A6994110073155E /* StockPricesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockPricesViewController.h; sourceTree = "<group>"; };
-		1F2AA3621A6994110073155E /* StockPricesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockPricesViewController.m; sourceTree = "<group>"; };
+		1F2AA35A1A6983DE0073155E /* DailyPricesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyPricesModel.h; sourceTree = "<group>"; };
+		1F2AA35B1A6983DE0073155E /* DailyPricesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyPricesModel.m; sourceTree = "<group>"; };
+		1F2AA35E1A698AAB0073155E /* DailyPrice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyPrice.h; sourceTree = "<group>"; };
+		1F2AA35F1A698AAB0073155E /* DailyPrice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyPrice.m; sourceTree = "<group>"; };
+		1F2AA3611A6994110073155E /* ChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartViewController.h; sourceTree = "<group>"; };
+		1F2AA3621A6994110073155E /* ChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartViewController.m; sourceTree = "<group>"; };
+		1FA1C0821A6A26AE00247112 /* ChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartView.h; sourceTree = "<group>"; };
+		1FA1C0831A6A26AE00247112 /* ChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,14 +93,14 @@
 			children = (
 				1F2AA3351A6983740073155E /* AppDelegate.h */,
 				1F2AA3361A6983740073155E /* AppDelegate.m */,
-				1F2AA33A1A6983740073155E /* ViewController.h */,
-				1F2AA33B1A6983740073155E /* ViewController.m */,
-				1F2AA35E1A698AAB0073155E /* StockPrice.h */,
-				1F2AA35F1A698AAB0073155E /* StockPrice.m */,
-				1F2AA35A1A6983DE0073155E /* StockPricesModel.h */,
-				1F2AA35B1A6983DE0073155E /* StockPricesModel.m */,
-				1F2AA3611A6994110073155E /* StockPricesViewController.h */,
-				1F2AA3621A6994110073155E /* StockPricesViewController.m */,
+				1F2AA35E1A698AAB0073155E /* DailyPrice.h */,
+				1F2AA35F1A698AAB0073155E /* DailyPrice.m */,
+				1F2AA35A1A6983DE0073155E /* DailyPricesModel.h */,
+				1F2AA35B1A6983DE0073155E /* DailyPricesModel.m */,
+				1FA1C0821A6A26AE00247112 /* ChartView.h */,
+				1FA1C0831A6A26AE00247112 /* ChartView.m */,
+				1F2AA3611A6994110073155E /* ChartViewController.h */,
+				1F2AA3621A6994110073155E /* ChartViewController.m */,
 				1F2AA33D1A6983740073155E /* Images.xcassets */,
 				1F2AA33F1A6983740073155E /* Main.storyboard */,
 				1F2AA3331A6983740073155E /* Supporting Files */,
@@ -235,11 +235,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F2AA35C1A6983DE0073155E /* StockPricesModel.m in Sources */,
-				1F2AA3601A698AAB0073155E /* StockPrice.m in Sources */,
-				1F2AA33C1A6983740073155E /* ViewController.m in Sources */,
-				1F2AA3631A6994110073155E /* StockPricesViewController.m in Sources */,
+				1F2AA35C1A6983DE0073155E /* DailyPricesModel.m in Sources */,
+				1F2AA3601A698AAB0073155E /* DailyPrice.m in Sources */,
+				1F2AA3631A6994110073155E /* ChartViewController.m in Sources */,
 				1F2AA3391A6983740073155E /* main.m in Sources */,
+				1FA1C0841A6A26AE00247112 /* ChartView.m in Sources */,
 				1F2AA3371A6983740073155E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,7 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F2AA35D1A6985BF0073155E /* StockPricesModel.m in Sources */,
+				1F2AA35D1A6985BF0073155E /* DailyPricesModel.m in Sources */,
 				1F2AA34D1A6983740073155E /* AppleStockTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,7 +309,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -345,7 +345,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -428,6 +428,7 @@
 				1F2AA3521A6983740073155E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F2AA3531A6983740073155E /* Build configuration list for PBXNativeTarget "AppleStockTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +437,7 @@
 				1F2AA3551A6983740073155E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

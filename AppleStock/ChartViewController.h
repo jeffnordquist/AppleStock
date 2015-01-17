@@ -8,8 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface StockPricesViewController : NSViewController
+@interface ChartViewController : NSViewController
 
-@property (weak) IBOutlet NSView *animationView;
+@property (weak,nonatomic) IBOutlet NSView *chartView;
+@property (weak,nonatomic) IBOutlet NSView *animationView;
 
 @end

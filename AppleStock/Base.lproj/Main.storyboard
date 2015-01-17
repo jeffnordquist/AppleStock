@@ -650,11 +650,14 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Apple Stock Prices" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="1kf-YB-7Vx"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -664,21 +667,28 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--Stock Prices View Controller-->
+        <!--Chart View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="StockPricesViewController" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ChartViewController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K5T-95-UYR">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U3R-9S-a0m" customClass="ChartView">
+                                <rect key="frame" x="0.0" y="0.0" width="488" height="270"/>
                             </customView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="U3R-9S-a0m" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="FPT-As-kyl"/>
+                            <constraint firstAttribute="bottom" secondItem="U3R-9S-a0m" secondAttribute="bottom" id="o3B-TI-Uzu"/>
+                            <constraint firstAttribute="trailing" secondItem="U3R-9S-a0m" secondAttribute="trailing" constant="-8" id="sRU-aF-lVN"/>
+                            <constraint firstItem="U3R-9S-a0m" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="wHu-Em-8ZO"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="animationView" destination="K5T-95-UYR" id="5VL-cv-bjb"/>
+                        <outlet property="animationView" destination="U3R-9S-a0m" id="tpR-1V-fuN"/>
+                        <outlet property="chartView" destination="U3R-9S-a0m" id="UyU-W5-RhU"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

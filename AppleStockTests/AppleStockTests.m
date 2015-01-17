@@ -8,8 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
-#import "StockPricesModel.h"
-#import "StockPrice.h"
+#import "DailyPricesModel.h"
+#import "DailyPrice.h"
 
 NSString *testDataSource = @"stockprices.json";
 
@@ -30,7 +30,7 @@ NSString *testDataSource = @"stockprices.json";
 }
 
 - (void)testThatModelIsInitialized {
-	StockPricesModel *stockPricesModel = [StockPricesModel new];
+	DailyPricesModel *stockPricesModel = [DailyPricesModel new];
 	[stockPricesModel loadDataFromSource:testDataSource];
 	XCTAssertEqual(stockPricesModel.pricesArray.count, 5);
 	
@@ -42,7 +42,7 @@ NSString *testDataSource = @"stockprices.json";
 	NSNumber *testPrice = [priceFormatter numberFromString:@"97.99"];
 	NSNumber *resultPrice = [NSNumber new];
 	
-	for (StockPrice *item in stockPricesModel.pricesArray) {
+	for (DailyPrice *item in stockPricesModel.pricesArray) {
 		if (item.date == testDate) {
 			resultPrice = item.price;
 			break;
@@ -53,7 +53,7 @@ NSString *testDataSource = @"stockprices.json";
 }
 
 - (void)testThatHighAndLowPricesAreCorrect {
-	StockPricesModel *stockPricesModel = [StockPricesModel new];
+	DailyPricesModel *stockPricesModel = [DailyPricesModel new];
 	[stockPricesModel loadDataFromSource:testDataSource];
 
 	NSNumberFormatter *priceFormatter = [NSNumberFormatter new];

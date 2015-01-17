@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface StockPrice : NSObject
+@interface DailyPrice : NSObject
 
 @property (strong,nonatomic) NSDate *date;
 @property (strong,nonatomic) NSNumber *price;

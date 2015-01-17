@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface StockPricesModel : NSObject
+@interface DailyPricesModel : NSObject
 
 @property (strong,nonatomic) NSMutableArray *pricesArray;
 

@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 NQE. All rights reserved.
 //
 
-#import "StockPrice.h"
+#import "DailyPrice.h"
 
-@implementation StockPrice
+@implementation DailyPrice
 
 - (instancetype)init
 {
@@ -20,7 +20,7 @@
 	return self;
 }
 
-- (instancetype)initWithDate:(NSDate *)date price:(NSString *)price
+- (instancetype)initWithDate:(NSDate *)date price:(NSNumber *)price
 {
 	self = [super init];
 	if (self) {
